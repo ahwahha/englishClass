@@ -47,8 +47,6 @@
 
         #container {
             box-sizing: border-box;
-            border: #ddd solid 1px;
-            padding: 5px;
         }
 
         #container table {
@@ -101,10 +99,11 @@
                         "header": "URL",
                         "data": "url",
                         "modifier": function (row) {
-                            return Util.newElement("a", { href: row.url, target: 'blank' }).appendContent("--- Link ---");
+                            return Util.newElement("a", { href: row.url, target: 'blank' }).appendContent("--------------- Link ---------------");
                         }
                     }
                 ],
+                label: 'English Class Revisiion Videos Links',
                 start: 1,
                 end: 20,
                 defaultEnd: 20
