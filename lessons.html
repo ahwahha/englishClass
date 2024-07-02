@@ -32,7 +32,7 @@
                 sortedBy: 'lesson',
                 ascending: !true
             });
-            myTable.setData(await ((await fetch('./lessons.json')).json()));
+            myTable.setData(await (await fetch('./lessons.json')).json());
             myTable.fillTable();
         })
     </script>
