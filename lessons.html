@@ -21,7 +21,7 @@
                         "header": "URL",
                         "data": "url",
                         "modifier": function (row) {
-                            return Util.newElement("a", { href: row.url, target: 'blank' }).appendContent("--------------- Link ---------------");
+                            return Util.create("a", { href: row.url, target: 'blank' }).appendContent("--------------- Link ---------------");
                         }
                     }
                 ],
