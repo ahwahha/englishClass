@@ -4,10 +4,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='button.css'>
-    <script src="https://ahwahha.github.io/js/static/util-static.js"></script>
     <script>
         var myTable = null;
-        
+        document.write('<script src="https://ahwahha.github.io/js/static/Util.js?v=' + Date.now() + '"><\/script>');
+        document.write('<script src="https://ahwahha.github.io/js/static/JsonTable.js?v=' + Date.now() + '"><\/script>');
         document.addEventListener('DOMContentLoaded', async (event) => {
             myTable = new JsonTable(document.getElementById('container'));
             myTable.setTableSettings({
