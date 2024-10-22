@@ -4,9 +4,9 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='stylesheet' href='button.css'>
+    <script src="https://ahwahha.github.io/JsUtil/dist/util_bundle.js"></script>
     <script>
         var myTable = null;
-        document.write('<script src="https://ahwahha.github.io/JsUtil/dist/util_bundle.js?v=' + Date.now() + '"><\/script>');
         document.addEventListener('DOMContentLoaded', async (event) => {
             myTable = new JsonTable(document.getElementById('container'));
             myTable.setTableSettings({
@@ -32,7 +32,7 @@
                 ascending: !true
             });
             myTable.setData(await (await fetch('./lessons.json')).json());
-            myTable.fillTable();
+            myTable.refreshTable(true);
         })
     </script>
 
