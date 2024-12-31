@@ -16,13 +16,17 @@
                         "data": "lesson",
                         "rowsStyle": { "white-space": "nowrap", "width": "150px", "text-align": "left" },
                     },
-                    {
-                        "header": "URL",
-                        "data": "url",
-                        "modifier": function (row) {
-                            return Util.create("a", { href: row.url, target: 'blank' }).appendContent("--------------- Link ---------------");
-                        }
-                    }
+					{
+						"header": "URL",
+						"data": "url",
+						"rowsStyle": { "width": "1%", "padding": "2px", "text-align": "left"  },
+						"modifier": function (row) {
+							return Util.create('span', {'class':'button'}).appendContent('GO')
+							.addEventHandler('click',()=>{
+								window.open(row.url, 'app_window', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=800,height=500');
+							});
+						}
+					},
                 ],
                 label: 'English Class Revision Videos Links',
                 start: 1,
