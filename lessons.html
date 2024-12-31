@@ -19,9 +19,9 @@
                     {
                         "header": "URL",
                         "data": "url",
-                        "rowsStyle": { "padding": "2px" },
+                        "rowsStyle": { "padding": "2px", "width": "200px" },
                         "modifier": function (row) {
-                            return Util.create('span', {'class':'button', 'style':'width:200px;'}).appendContent('GO')
+                            return Util.create('span', {'class':'button', 'style':'width:100%;'}).appendContent('GO')
                             .addEventHandler('click',()=>{
                                 window.open(row.url, 'app_window', 'toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=800,height=500');
                             });
